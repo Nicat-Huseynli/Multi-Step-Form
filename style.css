@@ -79,10 +79,13 @@ main{
     }
 
     .step-1-info{
-        display: block;
+        /* display: none; */
         width: 40%;
-        padding-block: 30px;
-        
+        height: 100%;
+        padding-block: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
 
         .step-heading{
@@ -100,7 +103,7 @@ main{
         }
 
         form{
-
+            margin-top: -40px;
             label{
                 color: #656464;
                 font-size: 15px;
@@ -119,8 +122,8 @@ main{
         }
 
         .step-footer{
-            margin-top: 45px;
-            float: right;
+            display: flex;
+            justify-content: end;
             .next{
                 background-color: var(--marine-blue);
                 color: white;
@@ -135,7 +138,10 @@ main{
     .step-2-info{
         display: none;
         width: 40%;
-        padding-block: 20px;
+        padding-block: 5px;
+        /* display: flex; */
+        flex-direction: column;
+        justify-content: space-between;
 
         .step-heading{
             h2{
@@ -210,6 +216,18 @@ main{
                 gap: 15px;
                 margin-inline: auto;
 
+                .monthly-plan-switch{
+                    color: var(--marine-blue);
+                    font-weight: 510;
+                    font-size: 14.5px;
+                }
+
+                .yearly-plan-switch{
+                    color: var(--cool-gray);
+                    font-weight: 510;
+                    font-size: 14.5px;
+                }
+
 
                 /* Container for the toggle switch */
                 .toggle-switch {
@@ -265,7 +283,7 @@ main{
         }
 
         .step-footer{
-            margin-top: 25px;
+            margin-top: 15px;
             display: flex;
             justify-content: space-between;
 

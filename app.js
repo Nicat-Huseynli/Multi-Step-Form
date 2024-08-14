@@ -82,7 +82,7 @@ nextBtn_1.addEventListener("click", function() {
         // If all inputs are valid, proceed to the next step
         step1_Info.style.display = "none";
         step1.classList.remove("step-bg");
-        step2_Info.style.display = "block";
+        step2_Info.style.display = "flex";
         step2.classList.add("step-bg");
     }
 });
@@ -91,7 +91,7 @@ nextBtn_1.addEventListener("click", function() {
 // Back to the first step
 const backBtn_2 = document.querySelector(".step-2-back")
 backBtn_2.addEventListener("click", function(){
-    step1_Info.style.display = "block"
+    step1_Info.style.display = "flex"
     step1.classList.add("step-bg")
     step2_Info.style.display = "none"
     step2.classList.remove("step-bg")
@@ -117,14 +117,23 @@ const toggleSwitch = document.querySelector(".toggle-switch input");  // Target 
 const yearlyPlan = document.querySelectorAll(".yearly-plan");
 const monthlyPlan = document.querySelectorAll(".monthly-plan");
 
+const monthlyPlanSwitch = document.querySelector(".monthly-plan-switch")
+const yearlyPlanSwitch = document.querySelector(".yearly-plan-switch")
+
 toggleSwitch.addEventListener("change", function () {
     if (toggleSwitch.checked) {
         // Show yearly plan, hide monthly plan
         yearlyPlan.forEach(plan => plan.style.display = "block");
         monthlyPlan.forEach(plan => plan.style.display = "none");
+
+        yearlyPlanSwitch.style.color = "var(--marine-blue)"
+        monthlyPlanSwitch.style.color = "var(--cool-gray)"
     } else {
         // Show monthly plan, hide yearly plan
         yearlyPlan.forEach(plan => plan.style.display = "none");
         monthlyPlan.forEach(plan => plan.style.display = "block");
+
+        monthlyPlanSwitch.style.color = "var(--marine-blue)"
+        yearlyPlanSwitch.style.color = "var(--cool-gray)"
     }
 });
