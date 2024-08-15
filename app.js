@@ -137,3 +137,48 @@ toggleSwitch.addEventListener("change", function () {
         yearlyPlanSwitch.style.color = "var(--cool-gray)"
     }
 });
+
+
+
+// Go to the third step
+const nextBtn_2 = document.querySelector(".step-2-next")
+const step3_Info = document.querySelector(".step-3-info")
+const step3 = document.querySelector(".step-3")
+
+nextBtn_2.addEventListener("click",function(){
+    step2_Info.style.display = "none"
+    step2.classList.remove("step-bg")
+    step3_Info.style.display = "flex"
+    step3.classList.add("step-bg")
+})
+
+
+
+// Back to the second step
+const backBtn_3 = document.querySelector(".step-3-back")
+
+backBtn_3.addEventListener("click", function(){
+    step2_Info.style.display = "flex"
+    step2.classList.add("step-bg")
+    step3_Info.style.display = "none"
+    step3.classList.remove("step-bg")
+})
+
+
+
+// Select Add-Ons 
+const addOns = document.querySelectorAll(".add-ons");
+const checkboxes = document.querySelectorAll(".check input[type='checkbox']");
+
+addOns.forEach((add, index) => {
+    add.addEventListener("click", function () {
+        add.classList.toggle("chosen-add-ons");
+
+        // Toggle the checked state of the corresponding checkbox
+        if (checkboxes[index].checked) {
+            checkboxes[index].checked = false;
+        } else {
+            checkboxes[index].checked = true;
+        }
+    });
+});
