@@ -79,11 +79,11 @@ main{
     }
 
     .step-1-info{
-        display: none;
+        /* display: none; */
         width: 40%;
         height: 100%;
         padding-block: 15px;
-        /* display: flex; */
+        display: flex;
         flex-direction: column;
         justify-content: space-between;
 
@@ -352,7 +352,7 @@ main{
             }
 
             .add-ons-info{
-
+                width: 200px;
                 label{
                     font-size: 14px;
                     font-weight: 500;
@@ -397,11 +397,11 @@ main{
     }
 
     .step-4-info{
-        /* display: none; */
+        display: none;
         width: 40%;
         height: 100%;
         padding-block: 15px;
-        display: flex;
+        /* display: flex; */
         flex-direction: column;
         justify-content: space-between;
 

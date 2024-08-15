@@ -153,7 +153,6 @@ nextBtn_2.addEventListener("click",function(){
 })
 
 
-
 // Back to the second step
 const backBtn_3 = document.querySelector(".step-3-back")
 
@@ -182,3 +181,27 @@ addOns.forEach((add, index) => {
         }
     });
 });
+
+
+// Go to the fourth step
+const nextBtn_3 = document.querySelector(".step-3-next")
+const step4_Info = document.querySelector(".step-4-info")
+const step4 = document.querySelector(".step-4")
+
+nextBtn_3.addEventListener("click", function(){
+    step3_Info.style.display = "none"
+    step3.classList.remove("step-bg")
+    step4_Info.style.display = "flex"
+    step4.classList.add("step-bg")
+})
+
+
+// Back to the third step
+const backBtn_4 = document.querySelector(".step-4-back")
+
+backBtn_4.addEventListener("click", function(){
+    step3_Info.style.display = "flex"
+    step3.classList.add("step-bg")
+    step4_Info.style.display = "none"
+    step4.classList.remove("step-bg")
+})
